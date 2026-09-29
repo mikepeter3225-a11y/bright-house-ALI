@@ -1,41 +1,93 @@
-# Ascensus Retirement Portal robots.txt
-# Allow all search engines to crawl the site
+# robots.txt - Bot management for website
 
-User-agent: *
-Allow: /
-Allow: /index.html
-Allow: /account/
-Allow: /401k/
-Allow: /retirement/
-Allow: /resources/
-Allow: /sitemap.xml
+# ===== ALLOW LEGITIMATE SEARCH ENGINES =====
+# (Empty Disallow means ALLOW)
 
-# Disallow private/sensitive paths (if any exist)
-Disallow: /admin/
-Disallow: /api/
-Disallow: /private/
-Disallow: /*.json$
-Disallow: /transactional/
 
-# Sitemap location
-Sitemap: https://ascensus.com/sitemap.xml
-
-# Crawl delay (in seconds) - adjust based on server capacity
-Crawl-delay: 1
-
-# Specific rules for Google
 User-agent: Googlebot
-Allow: /
-Crawl-delay: 0.5
+Disallow:
 
-# Specific rules for Bing
+User-agent: Googlebot-Image
+Disallow:
+
+User-agent: Googlebot-Mobile
+Disallow:
+
 User-agent: Bingbot
-Allow: /
-Crawl-delay: 0.5
+Disallow:
 
-# Block bad bots (optional)
+User-agent: Bingbot-Image
+Disallow:
+
+User-agent: Slurp
+Disallow:
+
+User-agent: DuckDuckBot
+Disallow:
+
+User-agent: Baiduspider
+Disallow:
+
+User-agent: YandexBot
+Disallow:
+
+User-agent: AppleBot
+Disallow:
+
+# ===== BLOCK AGGRESSIVE CRAWLERS =====
+
 User-agent: AhrefsBot
 Disallow: /
 
 User-agent: SemrushBot
 Disallow: /
+
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: DotBot
+Disallow: /
+
+User-agent: SBIbot
+Disallow: /
+
+User-agent: OmgiliBot
+Disallow: /
+
+User-agent: CCBot
+Disallow: /
+
+User-agent: ScrapyBot
+Disallow: /
+
+User-agent: curl
+Disallow: /
+
+User-agent: wget
+Disallow: /
+
+User-agent: python-requests
+Disallow: /
+
+User-agent: scrapy
+Disallow: /
+
+# ===== BLOCK SENSITIVE PATHS FOR ALL BOTS =====
+
+User-agent: *
+Disallow: /admin/
+Disallow: /private/
+Disallow: /config/
+Disallow: /js/
+Disallow: /transactional/
+Disallow: /*.php$
+Disallow: /*.sql$
+Disallow: /*.zip$
+Disallow: /*.tar.gz$
+Allow: /
+
+# Crawl delay (in seconds) - adjust based on your server
+Crawl-delay: 1
+
+# Sitemap location (uncomment and update with your actual sitemap)
+#Sitemap: https://healthsavingsandspending-metlife.com/sitemap.xml
